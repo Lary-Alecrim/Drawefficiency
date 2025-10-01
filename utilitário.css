@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+}
+
+ul ,h4{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+#main-content {
+  margin-left: 260px; 
+  flex: 1;
+  padding: 20px;
+}
