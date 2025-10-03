@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="site de estágio " />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/Estágio.css" />
-    <title>Estágio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/conta.css" />
   </head>
   <body>
     <aside id="sidebar">
@@ -31,6 +25,10 @@
         <li class="botao-menu" data-link="Relatório.html">
           <img src="../icons/chart-bar.svg" alt="" />
           <span>Relátorios</span>
+        </li>
+        <li class="botao-menu" data-link="Perfil_alunos.html">
+          <img src="../icons/identification-card.svg" alt="" />
+          <span>Perfil dos Alunos </span>
         </li>
         <li class="botao-menu" data-link="Grupo de Estágio.html">
           <img src="../icons/users-four.svg" alt="" />
@@ -60,27 +58,6 @@
         </li>
       </ul>
     </aside>
-    <header class="content">
-      <h4 class="inter">Estágios</h4>
-      <a class="link_retorno" href="Mesa_de_estágio.html"
-        >Mesa de estágio <span class="detalhe_retorno"> > Estágios</span></a
-      >
-    </header>
-    <section id="filtro" class="content">
-      <ul>
-        <li>
-          <label for="">Data Inicial</label>
-          <input type="date" id="botao_filtro_data" />
-        </li>
-        <li>
-          <label for="">Data Final</label>
-          <input type="date" id="botao_filtro_data" />
-        </li>
-        <li>
-          <label for="">Status</label> <input type="text" id="botao_filtro" />
-        </li>
-      </ul>
-    </section>
     <script src="sidebar.js"></script>
   </body>
 </html>

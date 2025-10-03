@@ -5,21 +5,69 @@ body {
   background-color: #fafafa;
 }
 
-ul ,h4{
+ul,
+h4 {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
+label{
+  padding: 60px 40px;
+  font-weight: 600;
+}
+
+input{
+  margin: 10px 10px 0 30px;
+  display: block;
 }
 
 
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
 
-#main-content {
-  margin-left: 260px; 
+.link_retorno{
+  text-decoration: none;
+  margin-left: 20px;
+  color: #000;
+}
+
+.detalhe_retorno{
+color: #a9a9a9;
+font-weight: 500;
+}
+
+.content {
+  margin-left: 100px;
+  margin-top: 10px;
   flex: 1;
   padding: 20px;
+  z-index: 100;
+}
+
+#filtro {
+  margin-left: 200px;
+  background-color: #fff;
+  width: 830px;
+  height: 211px;
+  border: 4px #807d7d;
+}
+
+#filtro ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#botao_filtro{
+  width:180px ;
+  height: 45px;
+}
+#botao_filtro_data{
+  width:100px ;
+  height: 35px;
+ 
 }
