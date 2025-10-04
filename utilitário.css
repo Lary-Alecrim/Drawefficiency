@@ -67,7 +67,9 @@ input {
   width: 100px;
   height: 35px;
 }
-
+.link_principal{
+ cursor: pointer;
+}
 .link_principal ul li {
   display: flex;
   gap: 5px;

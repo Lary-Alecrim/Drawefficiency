@@ -4,7 +4,7 @@
 
 #organiza{
     display: grid;
-    grid-template-columns: 420px 420px ;
+    grid-template-columns: 450px 450px ;
     gap: 20px;
     align-content: center;
 }
