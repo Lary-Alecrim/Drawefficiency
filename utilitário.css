@@ -12,16 +12,15 @@ h4 {
   list-style: none;
 }
 
-label{
+label {
   padding: 60px 40px;
   font-weight: 600;
 }
 
-input{
+input {
   margin: 10px 10px 0 30px;
   display: block;
 }
-
 
 .inter {
   font-family: "Inter", sans-serif;
@@ -31,23 +30,21 @@ input{
   font-size: 48px;
 }
 
-.link_retorno{
+.link_retorno {
   text-decoration: none;
   margin-left: 20px;
   color: #000;
 }
 
-.detalhe_retorno{
-color: #a9a9a9;
-font-weight: 500;
+.detalhe_retorno {
+  color: #a9a9a9;
+  font-weight: 500;
 }
 
 .content {
   margin-left: 100px;
   margin-top: 10px;
-  flex: 1;
   padding: 20px;
-  z-index: 100;
 }
 
 #filtro {
@@ -62,12 +59,37 @@ font-weight: 500;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-#botao_filtro{
-  width:180px ;
+#botao_filtro {
+  width: 180px;
   height: 45px;
 }
-#botao_filtro_data{
-  width:100px ;
+#botao_filtro_data {
+  width: 100px;
   height: 35px;
- 
+}
+
+.link_principal ul li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 10px;
+  width: 423px;
+  height: 271px;
+  margin-left: 200px;
+}
+
+.link_principal ul li img {
+  width: 108px;
+  height: 108px;
+}
+
+.link_principal ul li span {
+  padding: 0px;
+  color: #78b3ed;
+  font-weight: 600;
+  font-size: 36px;
 }
