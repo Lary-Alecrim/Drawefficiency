@@ -1,0 +1,30 @@
+@import "../../utilitário.css";
+@import "../Sidebar.css";
+
+.content_chat {
+  position: relative;
+  margin-left: 100px;
+  background-color: #2d2d2d;
+  width: 1000px;
+  height: 618px;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+
+.content_chat::before,.content_chat::after  {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 1000px;
+  height: 80px;
+  background-color: #446c93;
+  z-index: -1;
+}
+
+.content_chat::before{
+    top: 0;
+}
+.content_chat::after {
+    bottom: 0;
+}

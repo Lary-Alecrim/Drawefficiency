@@ -4,21 +4,23 @@
   left: -5px;
   height: 630px;
   width: 30px;
-  background: white;
   display: flex;
   flex-direction: column;
   padding: 4px 40px 0px 8px;
   border-right: 1px solid #ccc;
   overflow: hidden;
   overflow-x: hidden;
+  z-index: 100;
   transition: all 0.4s ease;
-  z-index: 9999;
 }
 
-#sidebar:hover {
+#sidebar:hover { 
+  background-color: #fff;
+  top: 0;
   width: 260px;
   overflow: auto;
   border-right: none;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header {
