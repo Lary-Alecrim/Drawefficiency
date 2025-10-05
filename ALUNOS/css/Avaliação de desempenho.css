@@ -1,2 +1,46 @@
+@import "../Sidebar.css";
 @import "../../utilitário.css";
-@import "../../Sidebar.css";
+
+.content_avali {
+  margin-left: 100px;
+  width: 800px;
+  height: 690px;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+}
+
+.flex-elementos {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 25px;
+  gap: 80px;
+}
+
+.flex-elementos2 {
+  display: flex;
+  gap: 50px;
+  margin-left: 40px;
+}
+
+.titulo_span {
+  position: relative;
+  top: 20px;
+  padding-left: 40px;
+  padding-top: 40px;
+  color: #78b3ed;
+  font-weight: 600;
+  font-size: 26px;
+}
+.avaliacao {
+  display: flex;
+  justify-content: center;
+  background-color: #a9a9a9;
+  width: 125px;
+  height: 45px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.avaliacao img {
+  align-self: center;
+}

@@ -40,9 +40,9 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-        <li class="botao-menu" data-link="Mensagens e Comunidade.html">
+        <li class="botao-menu" data-link="Atendimento Virtual.html">
           <img src="../icons/chats.svg" alt="" />
-          <span>Mensagens e Comunidade</span>
+          <span>Atendimento Virtual</span>
         </li>
         <h4>General</h4>
         <li class="botao-menu" data-link="Configurações.html">
@@ -77,7 +77,14 @@
           <input type="date" id="botao_filtro_data" />
         </li>
         <li>
-          <label for="">Status</label> <input type="text" id="botao_filtro" />
+          <label for="">Status</label>
+          <select id="botao_filtro" >
+            <option value="" disabled selected>Selecione um status</option>
+            <option value="Aprovado">Aprovado</option>
+            <option value="Autorizado">Autorizado</option>
+            <option value="Não Autorizado">Não Autorizado</option>
+            <option value="Justificativa Enviada">Justificativa Enviada</option>
+          </select>
         </li>
       </ul>
     </section>

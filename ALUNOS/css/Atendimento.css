@@ -1,0 +1,35 @@
+@import "../../utilitário.css";
+@import "../Sidebar.css";
+
+#organiza {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  gap: 20px;
+  align-content: center;
+}
+
+.link_principal_atend {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 10px;
+  width: 423px;
+  height: 271px;
+  margin-left: 100px;
+}
+
+.link_principal_atend ul li img {
+  width: 108px;
+  height: 108px;
+}
+
+.link_principal_atend ul li span {
+  padding: 0px;
+  color: #78b3ed;
+  font-weight: 600;
+  font-size: 36px;
+}
