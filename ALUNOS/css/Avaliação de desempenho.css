@@ -9,19 +9,6 @@
   border: 1px solid #a9a9a9;
 }
 
-.flex-elementos {
-  display: flex;
-  margin-left: 40px;
-  margin-top: 25px;
-  gap: 80px;
-}
-
-.flex-elementos2 {
-  display: flex;
-  gap: 50px;
-  margin-left: 40px;
-}
-
 .titulo_span {
   position: relative;
   top: 20px;

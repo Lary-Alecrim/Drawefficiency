@@ -1,5 +1,82 @@
 @import "../../utilitário.css";
 @import "../Sidebar.css";
- 
 
-           
+#filtro {
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+  height: 150px;
+}
+.content {
+  position: relative;
+}
+.botao-filtro {
+  margin-top: 35px;
+  margin-left: 700px;
+  background-color: #78b3ed;
+  border: solid 4px #78b3ed;
+  border-radius: 5px;
+  width: 85px;
+  height: 45px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+}
+
+.img {
+  background-color: #34a853;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.img1 {
+  background-color: #78b3ed;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.img2 {
+  background-color: #a9a9a9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.filtro_legenda {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.filtro_legenda div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content_estagio {
+  margin-top: 50px;
+  margin-left: 200px;
+  width: 870px;
+  height: 290px;
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+}
+
+.estagio {
+  display: flex;
+  justify-content: center;
+  background-color: #a9a9a9;
+  width: 125px;
+  height: 45px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.estagio img {
+  align-self: center;
+}

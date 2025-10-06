@@ -1,2 +1,12 @@
 @import "../../utilitário.css";
-@import "../../Sidebar.css";
+@import "../Sidebar.css";
+
+body {
+  background-color:  #cfe8ff;
+
+}
+
+.menu {
+  background-color: #b6defa;
+}
+

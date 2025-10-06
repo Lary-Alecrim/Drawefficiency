@@ -66,13 +66,36 @@
     </header>
     <main class="content">
       <section class="content_chat">
-        <div>
-          <img src="../icons/user-circle.svg" alt="" />
-          <span>Professor [Nome do professor ]</span>
-          <span id="detalhe">(Disponível/Indisponível)</span>
-        </div>
+        <main class="main">
+          <div class="chat-box">
+            <div class="chat-header">
+              <div class="professor-icon"></div>
+              <div class="professor-info">
+                <p class="professor-name">Professor [Nome do professor]</p>
+                <span class="status">(Disponível/Indisponível)</span>
+              </div>
+            </div>
+
+            <div class="chat-messages">
+              <div class="message professor">
+                Olá aluno, bem-vindo ao atendimento.
+              </div>
+              <div class="message professor">Em que posso ajudar hoje?</div>
+              <div class="message aluno">
+                Professor, gostaria de esclarecer dúvidas sobre meu estágio.
+              </div>
+              <div class="message aluno">Posso marcar um horário?</div>
+            </div>
+
+            <div class="chat-input">
+              <input type="text" placeholder="Digite sua mensagem..." />
+              <button class="send-btn">➤</button>
+            </div>
+          </div>
+        </main>
       </section>
     </main>
+    <script src="chat.js"></script>
     <script src="sidebar.js"></script>
   </body>
 </html>
