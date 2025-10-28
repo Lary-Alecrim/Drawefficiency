@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draweffieny - Login</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #1E3C72, #2A5298); /* tons de azul */
+      color: #fff;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 120px; /* Ajuste conforme sua logo */
+      margin-bottom: 20px;
+    }
+
+    .login-container h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .login-container input::placeholder {
+      color: #e0e0e0;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #0066cc;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-container button:hover {
+      background-color: #005bb5;
+    }
+
+    .login-container a {
+      display: block;
+      margin-top: 15px;
+      color: #cce0ff;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .login-container a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- Substitua o src pelo caminho da sua logo -->
+    <img src="../logo.webp" alt="Draweffiency Logo">
+    <h1>Draweffieny</h1>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <a href="#">Esqueceu a senha?</a>
+    </form>
+  </div>
+</body>
+</html>
