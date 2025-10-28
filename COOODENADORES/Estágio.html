@@ -32,7 +32,7 @@
           <img src="../icons/chart-bar.svg" alt="" />
           <span>Relátorios</span>
         </li>
-        <li class="botao-menu" data-link="Perfil_alunos.html">
+                <li class="botao-menu" data-link="Perfil_alunos.html">
           <img src="../icons/identification-card.svg" alt="" />
           <span>Perfil dos Alunos </span>
         </li>
@@ -44,12 +44,9 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-        <li class="botao-menu" data-link="Mensagens e Comunidade.html">
-          <img src="../icons/chats.svg" alt="" />
-          <span>Mensagens e Comunidade</span>
-        </li>
+
         <h4>General</h4>
-        <li class="botao-menu" data-link="Configurações.html">
+        <li class="botao-menu" data-link="Configuracao.html">
           <img src="../icons/gear.svg" alt="" />
           <span>Configurações</span>
         </li>
@@ -70,6 +67,8 @@
         >Mesa de estágio <span class="detalhe_retorno"> > Estágios</span></a
       >
     </header>
+    
+
     <section id="filtro" class="content">
       <ul>
         <li>
@@ -81,10 +80,62 @@
           <input type="date" id="botao_filtro_data" />
         </li>
         <li>
-          <label for="">Status</label> <input type="text" id="botao_filtro" />
+          <label for="">Status</label>
+          <select id="botao_filtro">
+            <option value="" disabled selected>Selecione um status</option>
+            <option value="Aprovado">Aprovado</option>
+            <option value="Autorizado">Autorizado</option>
+            <option value="Não Autorizado">Não Autorizado</option>
+            <option value="Justificativa Enviada">Justificativa Enviada</option>
+          </select>
         </li>
       </ul>
+      <button class="botao-filtro">
+        <img src="../icons/" alt="" />Filtrar
+      </button>
+      <section class="filtro_legenda">
+        <div>
+          <img class="img" src="../icons/circle.svg" alt="" />
+          <span>Aprovado</span>
+        </div>
+        <div>
+          <img class="img1" src="../icons/circle (1).svg" alt="" />
+          <span>Autorizado</span>
+        </div>
+        <div>
+          <img class="img2" src="../icons/circle (2).svg" alt="" />
+          <span>Não Autorizado</span>
+        </div>
+      </section>
     </section>
+    <main >
+       <section class="content_estagio">
+        <div class="flex-elementos">
+          <p>Aluno</p>
+          <div><span>Dia</span><p>mês/ano</p><p>Semana</p></div>
+          <div><span>Dia</span><p>mês/ano</p><p>Semana</p></div>
+          <div><span>Dia</span><p>mês/ano</p><p>Semana</p></div>
+          <div><span>Dia</span><p>mês/ano</p><p>Semana</p></div>
+        </div>
+      <div class="flex-elementos2">
+        <div>
+          <img src="../icons/user-circle.svg" alt="" />
+          <p>Nome <br />turma</p>
+        </div>
+        <div class="estagio">
+          <img src="../icons/clock-user.svg" alt="" />
+        </div>
+        <div class="estagio">
+          <img src="../icons/clock-user.svg" alt="" />
+        </div>
+        <div class="estagio">
+          <img src="../icons/clock-user.svg" alt="" />
+        </div>
+        <div class="estagio">
+          <img src="../icons/clock-user.svg" alt="" />
+        </div>
+      </div>
+    </main>
     <script src="sidebar.js"></script>
   </body>
 </html>

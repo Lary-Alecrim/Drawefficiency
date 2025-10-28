@@ -1,2 +1,140 @@
 @import "../../utilitário.css";
-@import "../../Sidebar.css";
+@import "../Sidebar.css";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d7e8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.conteudo {
+  padding: 40px;
+  margin-left: 250px;
+}
+
+.header-page {
+  margin-bottom: 20px;
+}
+
+.header-page h2 {
+  font-size: 26px;
+  color: #2a2a2a;
+  margin-bottom: 5px;
+}
+
+.header-page p {
+  color: #888;
+  font-size: 14px;
+}
+
+.perfil-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  transition: all 0.3s ease;
+}
+
+.perfil-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+  text-align: center;
+}
+
+.foto-perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #4e73df;
+  background-color: #f0f2f5;
+  object-fit: cover;
+}
+
+.btn-foto {
+  background: #4e73df;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-foto:hover {
+  background: #3c5fc2;
+}
+
+.dados h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+}
+
+.infos,
+.seguranca {
+  margin-bottom: 20px;
+}
+
+.infos h4,
+.seguranca h4 {
+  color: #4e73df;
+  margin-bottom: 10px;
+}
+
+.infos p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.btn-editar {
+  display: block;
+  background: #f0f2f5;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+
+.btn-editar:hover {
+  background: #e2e6ea;
+}
+
+.btn-alerta {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-alerta:hover {
+  background: #e85a5a;
+}
+
+.btn-sair {
+  background: #4e73df;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-sair:hover {
+  background: #3c5fc2;
+}

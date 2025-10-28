@@ -1,8 +1,8 @@
-document
-  .querySelector(".aside-list")
-  .addEventListener("click", function (event) {
-    const li = event.target.closest("li"); //caça o li
-    if (li && li.dataset.link) {
-      window.location.href = li.dataset.link; // quando clicar vai mudar para outra página
+document.querySelectorAll('#sidebar .botao-menu').forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const link = botao.dataset.link;
+    if (link) {
+      window.location.href = link;
     }
   });
+});

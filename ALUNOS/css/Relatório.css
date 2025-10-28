@@ -1,10 +1,9 @@
 @import "../../utilitário.css";
 @import "../Sidebar.css";
 
-
-#organiza{
-    display: grid;
-    grid-template-columns: 450px 450px ;
-    gap: 20px;
-    align-content: center;
+#organiza {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  gap: 20px;
+  align-content: center;
 }

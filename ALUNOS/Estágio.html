@@ -28,10 +28,7 @@
           <img src="../icons/clock-user.svg" alt="" />
           <span>Registro de Estágios</span>
         </li>
-        <li class="botao-menu" data-link="Relatório.html">
-          <img src="../icons/chart-bar.svg" alt="" />
-          <span>Relátorios</span>
-        </li>
+
         <li class="botao-menu" data-link="Grupo de Estágio.html">
           <img src="../icons/users-four.svg" alt="" />
           <span>Grupo de Estágio</span>
@@ -66,6 +63,7 @@
         >Mesa de estágio <span class="detalhe_retorno"> > Estágios</span></a
       >
     </header>
+    
 
     <section id="filtro" class="content">
       <ul>
@@ -120,20 +118,50 @@
           <img src="../icons/user-circle.svg" alt="" />
           <p>Nome <br />turma</p>
         </div>
-        <div class="estagio">
+        <div class="estagio" id="estagio" >
           <img src="../icons/clock-user.svg" alt="" />
         </div>
-        <div class="estagio">
+        <div class="estagio" id="estagio">
           <img src="../icons/clock-user.svg" alt="" />
         </div>
-        <div class="estagio">
+        <div class="estagio" id="estagio">
           <img src="../icons/clock-user.svg" alt="" />
         </div>
-        <div class="estagio">
+        <div class="estagio" id="estagio">
           <img src="../icons/clock-user.svg" alt="" />
         </div>
       </div>
+      <div id="modal-form" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Registrar Estágio</h3>
+    <form id="form-estagio">
+      <label for="data">Data:</label>
+      <input  type="date" id="data" name="data" required />
+
+      <label for="hora-entrada">Horário de Entrada:</label>
+      <input type="time" id="hora-entrada" name="hora-entrada" required />
+
+      <label for="hora-saida">Horário de Saída:</label>
+      <input type="time" id="hora-saida" name="hora-saida" required />
+
+      <label for="atividade">Atividade Desenvolvida:</label>
+      <textarea id="atividade" name="atividade" rows="3" required></textarea>
+
+      <button type="submit">Enviar</button>
+          </form>
+          <form id="form-estagio">
+           <div id="mensagem-sucesso" class="mensagem-sucesso">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Sucesso">
+    <p>Sua ficha de estágio foi enviada!</p>
+     </div>
+     </form>
+
+    </div>
+   </div>
     </main>
     <script src="sidebar.js"></script>
+    <script  src="form_est.js"></script>
+    <script src="mensagem de sucesso.js"></script>
   </body>
 </html>

@@ -1,9 +1,13 @@
 @import "../../utilitário.css";
 @import "../Sidebar.css";
 
+a {
+  text-decoration: none;
+}
+
 #organiza {
   display: grid;
-  grid-template-columns: 450px 450px;
+  grid-template-columns: 450px 450px 450px;
   gap: 20px;
   align-content: center;
 }
@@ -17,8 +21,8 @@
   background-color: #fff;
   border: 1px solid #a9a9a9;
   border-radius: 10px;
-  width: 423px;
-  height: 271px;
+  width: 1003px;
+  height: 771px;
   margin-left: 100px;
 }
 
@@ -28,6 +32,7 @@
 }
 
 .link_principal_atend ul li span {
+  align-self: center;
   padding: 0px;
   color: #78b3ed;
   font-weight: 600;

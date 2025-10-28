@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/Mesa de estágio.css" />
-  </head>
-  <body>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesa de estágio - Professores</title>
+  <link rel="stylesheet" href="css/Mesa de estágio.css" />
+</head>
+<body>
     <aside id="sidebar">
       <div class="sidebar-header">
         <img class="logo" src="../logo.webp" alt="logo da Draweffieny" />
@@ -22,11 +22,8 @@
           <img src="../icons/clock-user.svg" alt="" />
           <span>Registro de Estágios</span>
         </li>
-        <li class="botao-menu" data-link="Relatório.html">
-          <img src="../icons/chart-bar.svg" alt="" />
-          <span>Relátorios</span>
-        </li>
-        <li class="botao-menu" data-link="Perfil_alunos.html">
+
+                <li class="botao-menu" data-link="Perfil_alunos.html">
           <img src="../icons/identification-card.svg" alt="" />
           <span>Perfil dos Alunos </span>
         </li>
@@ -38,26 +35,69 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-        <li class="botao-menu" data-link="Mensagens e Comunidade.html">
-          <img src="../icons/chats.svg" alt="" />
-          <span>Mensagens e Comunidade</span>
-        </li>
+
         <h4>General</h4>
-        <li class="botao-menu" data-link="Configurações.html">
-          <img src="../icons/gear.svg" alt="" />
-          <span>Configurações</span>
+        <li class="botao-menu" data-link="Configuracao.html">
+          <img src="../icons/gear.svg" alt="" /> <span>Configurações</span>
         </li>
         <h4>Account</h4>
         <li class="botao-menu" data-link="Conta.html">
-          <img src="../icons/user-circle.svg" alt="" />
-          <span>Conta</span>
+          <img src="../icons/user-circle.svg" alt="" /> <span>Conta</span>
         </li>
         <li class="botao-menu" data-link="Conta.html">
-          <img src="../icons/sign-in.svg" alt="" />
-          <span>Sair da Conta </span>
+          <img src="../icons/sign-in.svg" alt="" /> <span>Sair da Conta </span>
         </li>
       </ul>
     </aside>
-    <script src="sidebar.js"></script>
-  </body>
+
+  <main class="main">
+    <header class="content">
+      <h4 class="inter">Mesa de estágio</h4>
+    </header>
+
+    <section class="content">
+      <div class="left-column">
+        <!-- Mensagem para alunos -->
+              <div class="right-column">
+        <!-- Formulário para criar uma nova nota -->
+        <div class="nova-nota">
+          <h4>📌 Nova Nota</h4>
+          <input type="text" placeholder="Título da nota" id="tituloNota" />
+          <textarea placeholder="Descrição da nota" id="descNota"></textarea>
+          <select id="tipoNota">
+            <option value="Pessoal">Pessoal</option>
+            <option value="Compartilhado">Compartilhado</option>
+          </select>
+          <button onclick="adicionarNota()">Cadastrar</button>
+        </div>
+
+        <!-- Notificações de avaliações -->
+        <div class="avaliacoes-card">
+          <h3>Notificações de avaliações</h3>
+          <p><strong>Entregues:</strong> 5</p>
+          <p><strong>Pendentes aprovação:</strong> 2</p>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="aviso-card">
+          <div class="prancheta"></div>
+          <h4>👤 Aluno do Curso</h4>
+          <p>[Avisos gerais]</p>
+        </div>
+        <div class="aviso-card">
+          <div class="prancheta"></div>
+          <h4>👤 Coordenador de Estágio</h4>
+          <p>[Avisos gerais]</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Drawefficiency — o futuro da gestão de estágios.
+    </footer>
+  </main>
+
+  <script src="sidebar.js"></script>
+</body>
 </html>

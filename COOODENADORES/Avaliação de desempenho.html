@@ -38,12 +38,9 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-        <li class="botao-menu" data-link="Atendimento Virtual.html">
-          <img src="../icons/chats.svg" alt="" />
-          <span>Atendimento Virtual</span>
-        </li>
+
         <h4>General</h4>
-        <li class="botao-menu" data-link="Configurações.html">
+        <li class="botao-menu" data-link="Configuracao.html">
           <img src="../icons/gear.svg" alt="" />
           <span>Configurações</span>
         </li>
@@ -147,6 +144,20 @@
         </div>
       </section>
     </main>
+    <script>
+const avaliacao = document.querySelector(".avaliacao");
+const formulario = document.getElementById("formulario");
+
+avaliacao.addEventListener("click", () => {
+  if (formulario.style.display === "none" || formulario.style.display === "") {
+    formulario.style.display = "block";
+    avaliacao.textContent = "Fechar Formulário";
+  } else {
+    formulario.style.display = "none";
+    avaliacao.textContent = "Abrir Formulário";
+  }
+});
+ </script>
     <script src="sidebar.js"></script>
   </body>
 </html>

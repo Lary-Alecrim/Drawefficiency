@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Grupo de Estágio</title>
     <link rel="stylesheet" href="css/Grupo de Estágio.css" />
+    <link rel="stylesheet" href="css/modalAlunos.css" />
   </head>
   <body>
     <aside id="sidebar">
@@ -22,12 +23,11 @@
           <img src="../icons/clock-user.svg" alt="" />
           <span>Registro de Estágios</span>
         </li>
-
         <li class="botao-menu" data-link="Perfil_alunos.html">
           <img src="../icons/identification-card.svg" alt="" />
           <span>Perfil dos Alunos </span>
         </li>
-        <li class="botao-menu" data-link="Grupo de Estágio.html">
+        <li class="botao-menu ativo" data-link="Grupo de Estágio.html">
           <img src="../icons/users-four.svg" alt="" />
           <span>Grupo de Estágio</span>
         </li>
@@ -35,7 +35,6 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-
         <h4>General</h4>
         <li class="botao-menu" data-link="Configuracao.html">
           <img src="../icons/gear.svg" alt="" />
@@ -46,19 +45,21 @@
           <img src="../icons/user-circle.svg" alt="" />
           <span>Conta</span>
         </li>
-        <li class="botao-menu" data-link="Conta.html">
+        <li class="botao-menu" data-link="Login.html">
           <img src="../icons/sign-in.svg" alt="" />
           <span>Sair da Conta </span>
         </li>
       </ul>
     </aside>
+
     <header class="content">
-      <h4 class="inter">Turma e grupo</h4>
-      <a class="link_retorno" href="Mesa_de_estágio.html"
-        >Mesa de estágio
-        <span class="detalhe_retorno"> >Turma e grupo </span>
+      <h4 class="inter">Turma e Grupo</h4>
+      <a class="link_retorno" href="Mesa_de_estágio.html">
+        Mesa de estágio
+        <span class="detalhe_retorno"> > Turma e Grupo </span>
       </a>
     </header>
+
     <main class="content">
       <div class="filtros content_filtro">
         <label for="turma">Turma:</label>
@@ -77,6 +78,9 @@
           <option value="Grupo C">Grupo C</option>
           <option value="Grupo D">Grupo D</option>
         </select>
+
+
+        <button id="btnAdicionarAluno" class="btn-adicionar">+ Adicionar Aluno</button>
       </div>
 
       <div class="professores">
@@ -102,49 +106,38 @@
         <h3>ALUNOS</h3>
       </div>
 
-      <div class="alunos">
+      <div class="alunos" id="listaAlunos">
         <div class="aluno">
           <div class="icone"></div>
           <p>Nome turma</p>
         </div>
+        
+      <div class="alunos" id="listaAlunos">
         <div class="aluno">
           <div class="icone"></div>
           <p>Nome turma</p>
         </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
-        <div class="aluno">
-          <div class="icone"></div>
-          <p>Nome turma</p>
-        </div>
+        
+      <div class="alunos" id="listaAlunos">
         <div class="aluno">
           <div class="icone"></div>
           <p>Nome turma</p>
         </div>
       </div>
     </main>
+
+
+    <div id="modalAlunos" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Selecione um Aluno</h2>
+        <div id="listaModalAlunos" class="lista-alunos">
+          <p>Carregando alunos...</p>
+        </div>
+      </div>
+    </div>
+
     <script src="sidebar.js"></script>
+    <script src="modalAlunos.js"></script>
   </body>
 </html>

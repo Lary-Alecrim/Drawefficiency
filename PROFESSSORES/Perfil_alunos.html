@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Perfis dos alunos" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Perfil_alunos.css" />
+    <title>Perfil dos Alunos</title>
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <img class="logo" src="../logo.webp" alt="logo da Draweffieny" />
+        <h2>Draweffieny</h2>
+      </div>
+      <ul class="aside-list">
+        <h4>Main Menu</h4>
+        <li class="botao-menu" data-link="Mesa_de_estágio.html">
+          <img src="../icons/book-open-text.svg" alt="" />
+          <span>Mesa de estágio</span>
+        </li>
+        <li class="botao-menu" data-link="Estágio.html">
+          <img src="../icons/clock-user.svg" alt="" />
+          <span>Registro de Estágios</span>
+        </li>
+        <li class="botao-menu ativo" data-link="Perfil_alunos.html">
+          <img src="../icons/identification-card.svg" alt="" />
+          <span>Perfil dos Alunos</span>
+        </li>
+        <li class="botao-menu" data-link="Grupo de Estágio.html">
+          <img src="../icons/users-four.svg" alt="" />
+          <span>Grupo de Estágio</span>
+        </li>
+        <li class="botao-menu" data-link="Avaliação de desempenho.html">
+          <img src="../icons/clipboard-text.svg" alt="" />
+          <span>Avaliação de desempenho</span>
+        </li>
+        <h4>General</h4>
+        <li class="botao-menu" data-link="Configuracao.html">
+          <img src="../icons/gear.svg" alt="" />
+          <span>Configurações</span>
+        </li>
+        <h4>Account</h4>
+        <li class="botao-menu" data-link="Conta.html">
+          <img src="../icons/user-circle.svg" alt="" />
+          <span>Conta</span>
+        </li>
+        <li class="botao-menu" data-link="Login.html">
+          <img src="../icons/sign-in.svg" alt="" />
+          <span>Sair da Conta</span>
+        </li>
+      </ul>
+    </aside>
+    <header class="content">
+      <h4 class="inter">Perfis dos Alunos</h4>
+      <a class="link_retorno" href="Mesa_de_estágio.html"
+        >Mesa de estágio
+        <span class="detalhe_retorno"> > Perfil dos Alunos</span></a
+      >
+    </header>
+    <div class="filtros content_filtro">
+      <label for="turma">Turma:</label>
+      <select id="turma">
+        <option value="">Todas</option>
+        <option value="3° ano Informática">3° ano Informática</option>
+        <option value="2° ano Informática">2° ano Informática</option>
+        <option value="1° ano Informática">1° ano Informática</option>
+      </select>
+
+      <label for="grupo">Grupo:</label>
+      <select id="grupo">
+        <option value="">Todos</option>
+        <option value="Grupo A">Grupo A </option>
+        <option value="Grupo B">Grupo B</option>
+        <option value="Grupo C">Grupo C</option>
+         <option value="Grupo D">Grupo D</option>
+      </select>
+    </div>
+    <section id="perfil-alunos" class="content">
+      <div class="caixa-perfil">
+        <div class="aluno-card">
+          <img
+            src="../icons/user-circle.svg"
+            alt="Foto do aluno"
+            class="icone-aluno"
+          />
+          <div class="info">
+            <h3>Maria Oliveira</h3>
+            <p><strong>Turma:</strong> 3° Informática</p>
+            <p><strong>Grupo:</strong> Estágio 2</p>
+            <p><strong>Mátricula:</strong> 160103193</p>
+            <p><strong>Login:</strong> maria.oliveira@ifsp.edu.br</p>
+            <p><strong>Horas de Estágio:</strong> 120/240h</p>
+          </div>
+        </div>
+        <div class="aluno-card">
+          <img
+            src="../icons/user-circle.svg"
+            alt="Foto do aluno"
+            class="icone-aluno"
+          />
+          <div class="info">
+            <h3>João Silva</h3>
+            <p><strong>Turma:</strong> 3° Informática</p>
+            <p><strong>Grupo:</strong> Estágio 1</p>
+            <p><strong>Mátricula:</strong> 160103193</p>
+            <p><strong>Login:</strong> joao.silva@ifsp.edu.br</p>
+            <p><strong>Horas de Estágio:</strong> 110/240h</p>
+          </div>
+        </div>
+        <div class="aluno-card">
+          <img
+            src="../icons/user-circle.svg"
+            alt="Foto do aluno"
+            class="icone-aluno"
+          />
+          <div class="info">
+            <h3>Ana Santos</h3>
+            <p><strong>Turma:</strong> 2° Mecatrônica</p>
+            <p><strong>Grupo:</strong> Estágio 3</p>
+            <p><strong>Mátricula:</strong> 160103193</p>
+            <p><strong>Login:</strong> ana.santos@ifsp.edu.br</p>
+            <p><strong>Horas de Estágio:</strong> 90/240h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="sidebar.js"></script>
+  </body>
+</html>

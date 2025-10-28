@@ -22,10 +22,7 @@
           <img src="../icons/clock-user.svg" alt="" />
           <span>Registro de Estágios</span>
         </li>
-        <li class="botao-menu" data-link="Relatório.html">
-          <img src="../icons/chart-bar.svg" alt="" />
-          <span>Relátorios</span>
-        </li>
+
         <li class="botao-menu" data-link="Perfil_alunos.html">
           <img src="../icons/identification-card.svg" alt="" />
           <span>Perfil dos Alunos </span>
@@ -38,12 +35,9 @@
           <img src="../icons/clipboard-text.svg" alt="" />
           <span>Avaliação de desempenho</span>
         </li>
-        <li class="botao-menu" data-link="Atendimento Virtual.html">
-          <img src="../icons/chats.svg" alt="" />
-          <span>Atendimento Virtual</span>
-        </li>
+
         <h4>General</h4>
-        <li class="botao-menu" data-link="Configurações.html">
+        <li class="botao-menu" data-link="Configuracao.html">
           <img src="../icons/gear.svg" alt="" />
           <span>Configurações</span>
         </li>
@@ -146,7 +140,73 @@
           </div>
         </div>
       </section>
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="form-estagio">
+            <h2>Avaliação de Estágio</h2>
+
+            <label for="assiduidade">Assiduidade:</label>
+            <input type="text" id="assiduidade" name="assiduidade" required />
+
+            <label for="pontualidade">Pontualidade:</label>
+            <input type="text" id="pontualidade" name="pontualidade" required />
+
+            <label for="uniforme">Uso de Uniforme:</label>
+            <input type="text" id="uniforme" name="uniforme" required />
+
+            <label for="relacionamento">Relacionamento com a Equipe:</label>
+            <input
+              type="text"
+              id="relacionamento"
+              name="relacionamento"
+              required
+            />
+
+            <label for="desempenho">Desempenho Técnico:</label>
+            <input type="text" id="desempenho" name="desempenho" required />
+
+            <label for="iniciativa"
+              >Iniciativa para Solução de Problemas:</label
+            >
+            <input type="text" id="iniciativa" name="iniciativa" required />
+
+            <label for="interesse"
+              >Interesse no Aprendizado de Novas Situações:</label
+            >
+            <input type="text" id="interesse" name="interesse" required />
+
+            <label for="avaliacao">Avaliação Global:</label>
+            <textarea
+              id="avaliacao"
+              name="avaliacao"
+              rows="3"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
     </main>
+    <script>
+      const avaliacao = document.querySelector(".avaliacao");
+      const formulario = document.getElementById("formulario");
+
+      avaliacao.addEventListener("click", () => {
+        if (
+          formulario.style.display === "none" ||
+          formulario.style.display === ""
+        ) {
+          formulario.style.display = "block";
+          avaliacao.textContent = "Fechar Formulário";
+        } else {
+          formulario.style.display = "none";
+          avaliacao.textContent = "Abrir Formulário";
+        }
+      });
+    </script>
     <script src="sidebar.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>

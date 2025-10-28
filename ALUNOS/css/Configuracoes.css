@@ -1,2 +1,268 @@
 @import "../../utilitário.css";
-@import "../../Sidebar.css";
+@import "../Sidebar.css";
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #d7e8f8;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding-left: 100px;
+  color: #1e1e1e;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.breadcrumb {
+  color: #5f6b73;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb span {
+  color: #7f8c94;
+}
+
+.config-box {
+  background-color: #eaf3fa;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.config-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+section {
+  background: #f8fbfe;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+section h3 {
+  font-size: 17px;
+  color: #1e4976;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c7d7e5;
+  padding-bottom: 6px;
+}
+
+section p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #333;
+}
+input{
+    width: 100px;
+}
+input[type="password"] {
+  padding: 7px;
+  border: 1px solid #a4c7e8;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4691c5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #1a73e8;
+}
+
+.theme-buttons,
+.accessibility-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+a {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CAMPO DE SENHA ====== */
+.change-password {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.campo-senha {
+  position: relative;
+  width: 80%;
+}
+
+.campo-senha input {
+  padding: 8px 40px 8px 10px;
+  width: 100%;
+  border: 1px solid #a4c7e8;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ====== TEMA ESCURO (versão refinada) ====== */
+.tema-escuro {
+  background-color: #121212 !important; /* fundo geral */
+  color: #eaeaea !important; /* texto principal claro */
+}
+
+/* Caixa principal e seções */
+.tema-escuro .config-box,
+.tema-escuro section {
+  background-color: #1e1e1e !important; 
+  color: #dddddd !important;
+  border: 1px solid #2e2e2e; /* leve contorno pra separar as seções */
+}
+
+/* ====== TÍTULOS ====== */
+.tema-escuro h1,
+.tema-escuro h3,
+.tema-escuro h4 {
+  color: #ffffff !important; /* títulos bem brancos */
+}
+.tema-escuro .link_retorno {
+  color: #64a0ff !important; /* azul claro visível */
+}
+/* Parágrafos e textos secundários */
+.tema-escuro p,
+.tema-escuro span,
+.tema-escuro label {
+  color: #cccccc !important; /* cinza claro, legível */
+}
+
+/* ====== BOTÕES ====== */
+.tema-escuro button {
+  background-color: #2a75c8 !important;
+  color: #fff !important;
+}
+
+.tema-escuro button:hover {
+  background-color: #1a5dab !important;
+}
+
+
+
+/* ====== SIDEBAR ====== */
+.tema-escuro #sidebar {
+  background-color: #181818 !important; /* fundo do menu */
+}
+
+.tema-escuro .aside-list li {
+  color: #eaeaea !important;
+}
+
+.tema-escuro .aside-list li:hover {
+  background-color: #222 !important;
+  color: #64a0ff !important; /* mantém azul no hover */
+}
+
+/* Ícones no sidebar */
+.tema-escuro .aside-list img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+.tema-escuro .aside-list li:hover img {
+  filter: brightness(0) invert(0.7) sepia(1) saturat
+}
+
+/* ====== FONTE AJUSTÁVEL ====== */
+:root {
+  --font-size: 14px;
+}
+
+body {
+  font-size: var(--font-size);
+}
+
+/* ====== CAMPO DE SENHA ====== */
+.change-password {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px; /* mais espaço entre texto, input e botão */
+  margin-top: 10px;
+}
+
+.campo-senha {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre o input e o botão 👁️ */
+  width: 80%; /* largura geral do bloco */
+  max-width: 280px;
+}
+
+.campo-senha input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #a4c7e8;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botão 👁️ de mostrar/ocultar senha */
+.toggle-btn {
+  background: none;
+  border-radius: 5px;
+  font-size: 20px; /* botão maior */
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #1e4976;
+  transition: 0.2s;
+  margin-top: 1%;
+}
+
+.toggle-btn:hover {
+  background-color: #1a73e8;
+}
+
+/* Botão "Alterar senha" */
+.change-password button[type="submit"] {
+  margin-top: 8px; /* espaço entre input e botão Alterar senha */
+  background-color: #4691c5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.change-password  button[type="submit"]:hover {
+  background-color: #1a73e8;
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Estágios</title>
+    <link rel="stylesheet" href="css/calculo.css" />
+    <script>
+      function calcularEstagio() {
+        let total = parseInt(document.getElementById("total").value);
+        let feito = parseInt(document.getElementById("feito").value);
+
+        if (
+          isNaN(total) ||
+          isNaN(feito) ||
+          total <= 0 ||
+          feito < 0 ||
+          feito > total
+        ) {
+          alert("Preencha corretamente os campos!");
+          return;
+        }
+
+        let perc = ((feito / total) * 100).toFixed(1);
+        let restante = total - feito;
+
+        let estagio;
+        if (perc < 25) {
+          estagio = "Início do Estágio (1º Estágio)";
+        } else if (perc < 50) {
+          estagio = "Em Andamento (2º Estágio)";
+        } else if (perc < 75) {
+          estagio = "Avançado (3º Estágio)";
+        } else if (perc < 100) {
+          estagio = "Concluindo (4º Estágio)";
+        } else {
+          estagio = "Estágio Concluído 🎉";
+        }
+
+        document.getElementById("resultado").innerHTML = `
+        <b>Progresso:</b> ${perc}% <br>
+        <b>Horas Restantes:</b> ${restante} <br>
+        <b>Status:</b> ${estagio}
+      `;
+      }
+    </script>
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <img class="logo" src="../logo.webp" alt="logo da Draweffieny" />
+        <h2>Draweffieny</h2>
+      </div>
+      <ul class="aside-list">
+        <h4>Main Menu</h4>
+        <li class="botao-menu" data-link="Mesa_de_estágio.html">
+          <img src="../icons/book-open-text.svg" alt="" />
+          <span>Mesa de estágio</span>
+        </li>
+        <li class="botao-menu" data-link="Estágio.html">
+          <img src="../icons/clock-user.svg" alt="" />
+          <span>Registro de Estágios</span>
+        </li>
+        <li class="botao-menu" data-link="Relatório.html">
+          <img src="../icons/chart-bar.svg" alt="" />
+          <span>Relátorios</span>
+        </li>
+        <li class="botao-menu" data-link="Grupo de Estágio.html">
+          <img src="../icons/users-four.svg" alt="" />
+          <span>Grupo de Estágio</span>
+        </li>
+        <li class="botao-menu" data-link="Avaliação de desempenho.html">
+          <img src="../icons/clipboard-text.svg" alt="" />
+          <span>Avaliação de desempenho</span>
+        </li>
+        <li class="botao-menu" data-link="Atendimento Virtual.html">
+          <img src="../icons/chats.svg" alt="" />
+          <span>Atendimento Virtual</span>
+        </li>
+        <h4>General</h4>
+        <li class="botao-menu" data-link="Configuracao.html">
+          <img src="../icons/gear.svg" alt="" />
+          <span>Configurações</span>
+        </li>
+        <h4>Account</h4>
+        <li class="botao-menu" data-link="Conta.html">
+          <img src="../icons/user-circle.svg" alt="" />
+          <span>Conta</span>
+        </li>
+        <li class="botao-menu" data-link="Conta.html">
+          <img src="../icons/sign-in.svg" alt="" />
+          <span>Sair da Conta </span>
+        </li>
+      </ul>
+    </aside>
+    <header class="content">
+      <h4 class="inter">Cálculo</h4>
+      <a class="link_retorno" href="Relatório.html"
+        >Relatório <span class="detalhe_retorno"> >Cálculo de Estágio</span></a
+      >
+    </header>
+
+    <div class="container content">
+      <div class="card">
+        <div class="dados">
+          <h4>Informações do Estágio</h4>
+          <label>Total de Horas Obrigatórias:</label>
+          <input type="number" id="total" placeholder="Ex: 300" /><br />
+          <label>Horas já Cumpridas:</label>
+          <input type="number" id="feito" placeholder="Ex: 120" /><br />
+          <button onclick="calcularEstagio()">Calcular</button>
+          <div id="resultado" style="margin-top: 15px"></div>
+        </div>
+      </div>
+    </div>
+     <script src="sidebar.js"></script>
+  </body>
+</html>

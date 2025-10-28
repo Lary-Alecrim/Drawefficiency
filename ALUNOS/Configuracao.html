@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Configurações</title>
     <link rel="stylesheet" href="css/Configuracoes.css" />
   </head>
   <body>
@@ -22,17 +22,15 @@
           <img src="../icons/clock-user.svg" alt="" />
           <span>Registro de Estágios</span>
         </li>
-        <li class="botao-menu" data-link="Relatório.html">
-          <img src="../icons/chart-bar.svg" alt="" />
-          <span>Relátorios</span>
-        </li>
+
+
         <li class="botao-menu" data-link="Grupo de Estágio.html">
           <img src="../icons/users-four.svg" alt="" />
           <span>Grupo de Estágio</span>
         </li>
         <li class="botao-menu" data-link="Avaliação de desempenho.html">
           <img src="../icons/clipboard-text.svg" alt="" />
-          <span>Avaliação de desempenho</span>
+          <span>Avaliação de Desempenho</span>
         </li>
         <li class="botao-menu" data-link="Atendimento Virtual.html">
           <img src="../icons/chats.svg" alt="" />
@@ -48,40 +46,78 @@
           <img src="../icons/user-circle.svg" alt="" />
           <span>Conta</span>
         </li>
-        <li class="botao-menu" data-link="Conta.html">
+        <li class="botao-menu" data-link="Sair.html">
           <img src="../icons/sign-in.svg" alt="" />
-          <span>Sair da Conta </span>
+          <span>Sair da Conta</span>
         </li>
       </ul>
     </aside>
-      <div class="app">
-    <aside class="sidebar">
-      <div class="logo-area">
-        <img src="logo.png" alt="Logo do sistema">
-      </div>
-      <ul class="menu">
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-        <li><a href="#" class="active"><span>botao</span></a></li>
-        <li><a href="#"><span>botao</span></a></li>
-      </ul>
-    </aside>
 
-    <main class="main">
-      <div class="header">
-        <h2>Configurações</h2>
-        <span class="path">Mesa &gt; <span class="inactive">Configurações</span></span>
-      </div>
+    <main class="main-content">
+      <h1 class="inter">Configurações</h1>
+      <a class="link_retorno" href="Mesa_de_estágio.html"
+        >Mesa de estágio <span class="detalhe_retorno"> > Configurações </span>
+      </a>
 
-      <div class="content-box">
-        <!-- Área de Configurações -->
+      <div class="config-box">
+        <div class="config-sections">
+          <!-- Conta -->
+          <section class="info-conta">
+            <h3>Informações e gerenciamento da conta</h3>
+
+            <div class="change-password">
+              <h4>Nova senha:</h4>
+              <div class="campo-senha">
+                <input
+                  type="password"
+                  id="nova-senha"
+                  placeholder="Digite a nova senha"
+                />
+                <button type="button" id="toggle-senha" class="toggle-btn">
+                  👁️
+                </button>
+              </div>
+              <button id="alterar-senha">Alterar senha</button>
+              <span class="feedback" id="senha-feedback"></span>
+            </div>
+          </section>
+
+          <!-- Aparência -->
+          <section class="aparencia">
+            <h3>Aparência</h3>
+            <p>Alterar tema</p>
+            <div class="theme-buttons">
+              <button id="tema-claro">Claro</button>
+              <button id="tema-escuro">Escuro</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- Acessibilidade e Sobre -->
+        <div class="config-sections">
+          <section class="acessibilidade">
+            <h3>Acessibilidade:</h3>
+            <div class="accessibility-buttons">
+              <button id="aumentar-fonte">Aumentar Fonte</button>
+              <button id="diminuir-fonte">Diminuir Fonte</button>
+            </div>
+          </section>
+
+          <section class="sobre">
+            <h3>Sobre</h3>
+            <p>
+              Trabalhamos em conjunto para a criação de um site para auxiliar na
+              organização dos estágios e em um ambiente acolhedor que preza pela
+              organização e monitoramento.
+            </p>
+            <a href="#">Envie um feedback</a>
+          </section>
+        </div>
       </div>
     </main>
-  </div>
+
     <script src="sidebar.js"></script>
+    <script src="config-aluno.js"></script>
+    <script src="tema.js"></script>
   </body>
 </html>

@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cálculo de Horas de Estágio</title>
     <link rel="stylesheet" href="css/Relatório.css" />
   </head>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #e6f0fa;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* centraliza verticalmente */
+        padding: 10px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 350px; /* não deixa escapar */
+        text-align: center;
+      }
+
+      .card h4 {
+        margin-bottom: 12px;
+        color: #2c3e50;
+        font-size: 20px;
+      }
+
+      label {
+        display: block;
+        text-align: left;
+        margin: 6px 0 2px 0;
+        color: #34495e;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 7px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 6px; /* reduz espaçamento */
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #1e90ff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 6px;
+      }
+
+      button:hover {
+        background-color: #0f75d1;
+      }
+
+      .barra-progresso {
+        background-color: #e0e0e0;
+        border-radius: 20px;
+        overflow: hidden;
+        height: 16px;
+        margin: 10px 0;
+      }
+
+      .barra-progresso-fill {
+        background-color: #1e90ff;
+        height: 100%;
+        width: 0%;
+        text-align: center;
+        color: #fff;
+        line-height: 16px;
+        font-weight: 600;
+        border-radius: 20px;
+        transition: width 0.5s ease-in-out;
+        font-size: 12px;
+      }
+
+      #resultado {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    
   <body>
     <aside id="sidebar">
       <div class="sidebar-header">
@@ -14,91 +112,88 @@
       </div>
       <ul class="aside-list">
         <h4>Main Menu</h4>
-        <li class="botao-menu" data-link="Mesa_de_estágio.html">
-          <img src="../icons/book-open-text.svg" alt="" />
-          <span>Mesa de estágio</span>
-        </li>
-        <li class="botao-menu" data-link="Estágio.html">
-          <img src="../icons/clock-user.svg" alt="" />
-          <span>Registro de Estágios</span>
-        </li>
-        <li class="botao-menu" data-link="Relatório.html">
-          <img src="../icons/chart-bar.svg" alt="" />
-          <span>Relátorios</span>
-        </li>
-        <li class="botao-menu" data-link="Perfil_alunos.html">
-          <img src="../icons/identification-card.svg" alt="" />
-          <span>Perfil dos Alunos </span>
-        </li>
-        <li class="botao-menu" data-link="Grupo de Estágio.html">
-          <img src="../icons/users-four.svg" alt="" />
-          <span>Grupo de Estágio</span>
-        </li>
-        <li class="botao-menu" data-link="Avaliação de desempenho.html">
-          <img src="../icons/clipboard-text.svg" alt="" />
-          <span>Avaliação de desempenho</span>
-        </li>
-        <li class="botao-menu" data-link="Atendimento Virtual.html">
-          <img src="../icons/chats.svg" alt="" />
-          <span>Atendimento Virtual</span>
-        </li>
+        <li class="botao-menu" data-link="Mesa_de_estágio.html"><img src="../icons/book-open-text.svg" alt="" /><span>Mesa de estágio</span></li>
+        <li class="botao-menu" data-link="Estágio.html"><img src="../icons/clock-user.svg" alt="" /><span>Registro de Estágios</span></li>
+        <li class="botao-menu" data-link="Relatório.html"><img src="../icons/chart-bar.svg" alt="" /><span>Relatórios</span></li>
+        <li class="botao-menu" data-link="Grupo de Estágio.html"><img src="../icons/users-four.svg" alt="" /><span>Grupo de Estágio</span></li>
+        <li class="botao-menu" data-link="Avaliação de desempenho.html"><img src="../icons/clipboard-text.svg" alt="" /><span>Avaliação de desempenho</span></li>
+        <li class="botao-menu" data-link="Atendimento Virtual.html"><img src="../icons/chats.svg" alt="" /><span>Atendimento Virtual</span></li>
         <h4>General</h4>
-        <li class="botao-menu" data-link="Configurações.html">
-          <img src="../icons/gear.svg" alt="" />
-          <span>Configurações</span>
-        </li>
+        <li class="botao-menu" data-link="Configurações.html"><img src="../icons/gear.svg" alt="" /><span>Configurações</span></li>
         <h4>Account</h4>
-        <li class="botao-menu" data-link="Conta.html">
-          <img src="../icons/user-circle.svg" alt="" />
-          <span>Conta</span>
-        </li>
-        <li class="botao-menu" data-link="Conta.html">
-          <img src="../icons/sign-in.svg" alt="" />
-          <span>Sair da Conta </span>
-        </li>
+        <li class="botao-menu" data-link="Conta.html"><img src="../icons/user-circle.svg" alt="" /><span>Conta</span></li>
+        <li class="botao-menu" data-link="Conta.html"><img src="../icons/sign-in.svg" alt="" /><span>Sair da Conta </span></li>
       </ul>
     </aside>
 
     <header class="content">
-      <h4 class="inter">Relátorios</h4>
-      <a class="link_retorno" href="Mesa_de_estágio.html"
-        >Mesa de estágio <span class="detalhe_retorno"> > Relatórios </span>
-      </a>
+      <h4 class="inter">Cálculo de Horas de Estágio</h4>
+      <a class="link_retorno" href="Mesa_de_estágio.html">Mesa de estágio <span class="detalhe_retorno"> > Relatórios </span></a>
     </header>
-    <main id="organiza" class="content">
-      <section class="aside-list link_principal">
-        <ul>
-          <li data-link="cálculo.html">
-            <img class src="../icons/azul/clock-user.svg" alt="" />
-            <span>Cálculo de estágios</span>
-          </li>
-        </ul>
-      </section>
-      <section class="aside-list link_principal">
-        <ul>
-          <li data-link="Gráficos.html">
-            <img class src="../icons/azul/chart-line-up.svg" alt="" />
-            <span>Gráficos</span>
-          </li>
-        </ul>
-      </section>
-      <section class="aside-list link_principal">
-        <ul>
-          <li data-link="Registros.html">
-            <img class src="../icons/azul/address-book-tabs.svg " alt="" />
-            <span>Registros</span>
-          </li>
-        </ul>
-      </section>
-      <section class="aside-list link_principal">
-        <ul>
-          <li data-link="Justificativas.html">
-            <img class src="../icons/azul/calendar-x.svg" alt="" />
-            <span>Justificativas de faltas </span>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <script src="sidebar.js"></script>
+
+    <div class="container">
+      <div class="card">
+        <h4>Informações do Estágio</h4>
+
+        <label>Quantidade de horas por encontro:</label>
+        <input type="number" id="horasPorEncontro" placeholder="Ex: 2" />
+
+        <label>Número de encontros:</label>
+        <input type="number" id="numeroEncontros" placeholder="Ex: 15" />
+
+        <label>Total de horas obrigatórias:</label>
+        <input type="number" id="totalObrigatorio" placeholder="Ex: 300" />
+
+        <button onclick="calcularHoras()">Calcular</button>
+
+        <div class="barra-progresso">
+          <div id="barra" class="barra-progresso-fill">0%</div>
+        </div>
+
+        <div id="resultado"></div>
+      </div>
+    </div>
+
+    <script>
+      function calcularHoras() {
+        const horasPorEncontro = parseFloat(document.getElementById("horasPorEncontro").value);
+        const numeroEncontros = parseInt(document.getElementById("numeroEncontros").value);
+        const totalObrigatorio = parseInt(document.getElementById("totalObrigatorio").value);
+
+        if (
+          isNaN(horasPorEncontro) || isNaN(numeroEncontros) || isNaN(totalObrigatorio) ||
+          horasPorEncontro <= 0 || numeroEncontros <= 0 || totalObrigatorio <= 0
+        ) {
+          alert("Preencha todos os campos corretamente!");
+          return;
+        }
+
+        const horasCumpridas = horasPorEncontro * numeroEncontros;
+        const restante = totalObrigatorio - horasCumpridas;
+        const perc = Math.min(((horasCumpridas / totalObrigatorio) * 100).toFixed(1), 100);
+
+        let valorBimestre;
+        if (perc >= 100) {
+          valorBimestre = "Estágio Concluído neste bimestre 🎉";
+        } else if (perc >= 75) {
+          valorBimestre = "Estágio quase completo neste bimestre";
+        } else if (perc >= 50) {
+          valorBimestre = "Estágio em andamento neste bimestre";
+        } else {
+          valorBimestre = "Estágio inicial neste bimestre";
+        }
+
+        document.getElementById("resultado").innerHTML = `
+          <b>Horas Cumpridas:</b> ${horasCumpridas} <br>
+          <b>Horas Restantes:</b> ${restante > 0 ? restante : 0} <br>
+          <b>Status do Bimestre:</b> ${valorBimestre}
+        `;
+
+        // Atualiza barra de progresso
+        const barra = document.getElementById("barra");
+        barra.style.width = perc + "%";
+        barra.textContent = perc + "%";
+      }
+    </script>
   </body>
 </html>

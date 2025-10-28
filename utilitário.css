@@ -1,9 +1,11 @@
 body {
+  font-family: Arial, sans-serif;
+  background: #d9edff;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: linear-gradient(#cfe8ff, #b6defa);
 }
+
+
 
 ul,
 h4 {
@@ -19,7 +21,7 @@ label {
 
 input {
   margin: 10px 10px 0 30px;
-  display: block;
+  /* display: block; */
 }
 
 .inter {

@@ -1,0 +1,86 @@
+@import "../../utilitário.css";
+@import "../Sidebar.css";
+
+.content_filtro{
+   margin-top: -50px; 
+}
+
+#perfil-alunos {
+  margin-top: -50px; 
+}
+
+.filtros {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  align-items: center;
+  margin-right: 23px;
+}
+
+.filtros label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 0;
+}
+
+.filtros select {
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.caixa-perfil {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.aluno-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  padding: 22px 18px;
+  transition: 0.2s ease-in-out;
+}
+
+.aluno-card:hover {
+  background-color: #e8f1ff;
+  transform: translateY(-3px);
+}
+
+.icone-aluno {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.info {
+  text-indent: 0;
+}
+.info h3 {
+  margin: 6px 0 10px;
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.info p {
+  display: flex;
+  margin: 3px 0;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.4;
+}
